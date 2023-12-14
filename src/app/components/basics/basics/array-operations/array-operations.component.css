@@ -1,0 +1,38 @@
+.my-card {
+    margin: 10px;
+    border: 1px solid #ddd;
+    width: 30%;
+  }
+  
+  .my-card .mat-card-header {
+    background-color: #f5f5f5;
+  }
+  
+  .my-card .mat-card-title {
+    color: #333;
+  }
+  
+  .task {
+    margin-bottom: 20px;
+  }
+  
+  .task h3 {
+    color: #00796b;
+  }
+  
+  .task p {
+    margin: 5px 0;
+   
+  }
+ .flex{
+  
+  display: flex;
+  justify-content: center;
+ }
+ h5{
+ text-align: center;
+ }
+ h1{
+  margin-top: 50px;
+   text-align: center;
+ }

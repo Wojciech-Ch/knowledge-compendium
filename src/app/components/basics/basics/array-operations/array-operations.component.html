@@ -1,0 +1,130 @@
+<h1>Filtrowanie "filter"</h1>
+<h5>
+  Metoda filter tworzy nową tablicę zawierającą wszystkie elementy oryginalnej
+  tablicy, które spełniają określony warunek.
+</h5>
+<div class="flex">
+<mat-card class="my-card">
+  <mat-card-header> </mat-card-header>
+
+  <mat-card-content>
+    <div class="task">
+      <mat-card-title>Task 1</mat-card-title>
+      <p>Filtrowanie tablicy liczb do uzyskania tylko tych parzystych.</p>
+      <p><strong>Dane:</strong> {{ task1 }}</p>
+      <p><strong>Wynik:</strong> {{ this.task1Result }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="my-card">
+  <mat-card-header>
+    <mat-card-title>Task 2</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="task">
+      <p>
+        Filtrowanie tablicy obiektów do znalezienia osób dorosłych, których
+        imiona zaczynają się na literę 'A'.
+      </p>
+      <p><strong>Dane:</strong> {{ task2 | json }}</p>
+
+      
+
+      <p><strong>Wynik:</strong> {{ this.task2Result | json }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>
+</div>
+<h1>Mapowanie "map"</h1>
+<h5>
+  Metoda map tworzy nową tablicę, w której każdy element jest wynikiem wywołania
+  funkcji na każdym elemencie oryginalnej tablicy.
+</h5>
+<div class="flex">
+<mat-card class="my-card">
+  <mat-card-header>
+    <mat-card-title>Task 1</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="task">
+      <p>Kwadrat każdego elementu w tablicy liczb.</p>
+      <p><strong>Dane:</strong> {{ task1Map | json }}</p>
+      <p><strong>Wynik:</strong> {{ this.task1MapResult | json }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-card class="my-card">
+    <mat-card-header>
+      <mat-card-title>Task 2</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <div class="task">
+        <p>Tworzenie nowej tablicy stringów na podstawie tablicy obiektów (np. imion i wieku osób).</p>
+        <p><strong>Dane:</strong> {{task2Map | json}} </p>
+        <p><strong>Wynik:</strong> {{task2MapResult}} </p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+  <h1>Redukcja "reduce"</h1>
+  <h5>
+    Metoda reduce przetwarza tablicę do jednej skumulowanej wartości, przechodząc po każdym elemencie i używając funkcji redukującej.
+  </h5>
+  <div class="flex">
+  <mat-card class="my-card">
+    <mat-card-header>
+      <mat-card-title>Task 1</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <div class="task">
+        <p>Obliczenie sumy wszystkich elementów w tablicy liczb.</p>
+        <p><strong>Dane:</strong> {{ task1Reduce | json }}</p>
+        <p><strong>Wynik:</strong> {{ this.task1ReduceResult | json }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="my-card">
+    <mat-card-header>
+      <mat-card-title>Task 2</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <div class="task">
+        <p>Obliczenie łącznej ceny produktów w tablicy obiektów.</p>
+        <p><strong>Dane:</strong> {{task2Reduce | json}} </p>
+        <p><strong>Wynik:</strong> {{task2ReduceResult}}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+  <h1>Łączenie "concat"</h1>
+<h5>
+    Metoda concat łączy dwie lub więcej tablic w jedną nową tablicę.
+</h5>
+<div class="flex">
+<mat-card class="my-card">
+  <mat-card-content>
+    <div class="task">
+      <mat-card-title>Task 1</mat-card-title>
+      <p>Łączenie dwóch tablic liczb.</p>
+      <p><strong>Dane:</strong> [{{ task1Concat }}] and [{{task1Concat1}}]</p>
+      <p><strong>Wynik:</strong> [{{ this.task1ConcatResult }}]</p>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-card class="my-card">
+    <mat-card-content>
+      <div class="task">
+        <mat-card-title>Task 2</mat-card-title>
+        <p>Łączenie tablicy liczb i tablicy stringów.</p>
+        <p><strong>Dane:</strong> [{{ task1Concat }}] and [{{task1Concat1}}]</p>
+        <p><strong>Wynik:</strong> [{{ this.task1ConcatResult }}]</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
