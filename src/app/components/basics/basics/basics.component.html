@@ -3,6 +3,9 @@
       <mat-card-title>Podstawowe zagadnienia</mat-card-title>
     </mat-card-header>
     <mat-card-actions>
+      
         <button *ngFor="let item of basics | keyvalue" [routerLink]="item.value.path">{{ item.value.name }}</button>
     </mat-card-actions>
   </mat-card>
+
+  

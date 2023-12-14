@@ -15,6 +15,16 @@ const routes: Routes = [
       import('./components/basics/basics.module').then((m) => m.BasicsModule),
   },
   {
+    path: 'advanced',
+    loadChildren: () =>
+      import('./components/advanced/advanced.module').then((m) => m.AdvancedModule),
+  },
+  {
+    path: 'solved-exercises',
+    loadChildren: () =>
+      import('./components/solved-exercises/solved-exercises.module').then((m) => m.SolvedExercisesModule),
+  },
+  {
     path: '**',
     redirectTo: 'landing-page',
   },

@@ -4,6 +4,7 @@ import { BasicsComponent } from './basics/basics.component';
 import { ArrayOperationsComponent } from './basics/array-operations/array-operations.component';
 import { BasicTypesComponent } from './basics/basic-types/basic-types/basic-types.component';
 import { DataBindingComponent } from './basics/data-binding/data-binding.component';
+import { StringOperationsComponent } from './basics/string-operations/string-operations.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {path: "data-binding",
   component: DataBindingComponent
+},
+{path: "string-operations",
+component: StringOperationsComponent
 }
 ];
 

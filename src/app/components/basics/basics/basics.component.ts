@@ -22,5 +22,9 @@ export class BasicsComponent {
       name: 'Data binding',
       path: 'data-binding',
     },
+    stringOperations: {
+      name: 'Operacje na stringach',
+      path: 'string-operations',
+    },
   };
 }

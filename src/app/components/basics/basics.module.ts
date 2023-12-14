@@ -7,8 +7,9 @@ import { ArrayOperationsComponent } from './basics/array-operations/array-operat
 import { BasicTypesComponent } from './basics/basic-types/basic-types/basic-types.component';
 import { DataBindingComponent } from './basics/data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { StringOperationsComponent } from './basics/string-operations/string-operations.component';
 @NgModule({
-  declarations: [BasicsComponent, ArrayOperationsComponent, BasicTypesComponent, DataBindingComponent],
+  declarations: [BasicsComponent, ArrayOperationsComponent, BasicTypesComponent, DataBindingComponent, StringOperationsComponent],
   imports: [CommonModule, BasicsRoutingModule,MatCardModule, FormsModule],
 })
 export class BasicsModule implements OnInit {
