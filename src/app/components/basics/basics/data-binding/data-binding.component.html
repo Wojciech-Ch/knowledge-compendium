@@ -1,1 +1,24 @@
-<p>data-binding works!</p>
+<h1>Data Binding w Angularze - Podstawy i Przykłady</h1>
+
+<h3><strong>Interpolacja</strong> </h3>
+<h4>Interpolacja to najprostsza forma data bindingu. Umożliwia ona wyświetlanie wartości zmiennych z komponentu w HTML.</h4>
+<span>{{ title }}</span>
+
+<br>
+
+<h3><strong>Property binding</strong> </h3>
+<h4>Property Binding pozwala na ustawienie wartości właściwości elementu HTML lub dyrektywy.</h4>
+<img class="picture" [src]="losowyObrazek">
+
+
+<br>
+<h3><strong>Event Binding</strong> 
+    <h4>Event Binding umożliwia reagowanie na różne zdarzenia, takie jak kliknięcia czy wprowadzanie danych.</h4>
+    <button (click)="onClick()">Kliknij mnie</button>
+</h3>
+
+<br>
+<h3><strong>Two-Way Binding</strong> 
+    <h4>Two-Way Binding łączy Property i Event Binding, umożliwiając dwukierunkową synchronizację danych między modelem a widokiem.</h4>
+    <input [(ngModel)]="username" placeholder="Wpisz swoje imie" type="text">
+    <p>{{username}}</p>

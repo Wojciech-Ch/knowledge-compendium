@@ -29,19 +29,65 @@ export class ArrayOperationsComponent implements OnInit {
   task1Concat = [1, 2, 3, 4, 5, 6];
   task1Concat1 = [7, 8, 9, 10];
 
+  task1Sort = [1, 6, 2, 7, 3, 11, 16, 21, 100, 99];
+  task2Sort = [
+    { name: 'Alice', age: 5 },
+    { name: 'Bob', age: 17 },
+    { name: 'Carol', age: 30 },
+  ];
+
+  task1Slice = [
+    'Anna',
+    'Bartek',
+    'Cezary',
+    'Dorota',
+    'Ewa',
+    'Filip',
+    'Grażyna',
+    'Henryk',
+  ];
+
+  task1Spread = [
+    'Anna',
+    'Bartek',
+    'Cezary',
+    'Dorota',
+    'Ewa',
+    'Filip',
+    'Grażyna',
+    'Henryk',
+  ];
+  task1Spread1 = [
+    'Nowak',
+    'Kowalski',
+    'Wiśniewski',
+    'Wójcik',
+    'Kowalczyk',
+    'Kamiński',
+    'Lewandowski',
+    'Zieliński',
+  ];
 
   task1Result: any;
   task2Result: any;
+
   task1MapResult: any;
   task2MapResult: any;
+
   task1ReduceResult: any;
   task2ReduceResult: any;
   task3ReduceResult: any;
+
   task1ConcatResult: any;
 
-  constructor() {
-  
-}
+  task1SortResult: any;
+  task2SortResult: any;
+
+  task2SliceResult: any;
+
+  task1SpreadResult: any;
+
+  constructor() {}
 
   ngOnInit(): void {
     this.filterEvenNumbers(this.task1);
@@ -50,8 +96,11 @@ export class ArrayOperationsComponent implements OnInit {
     this.creatingStringArray(this.task2Map);
     this.sumOfAllNumbersInArray(this.task1Reduce);
     this.sumOfAllPricesInArrayOfObjects(this.task2Reduce);
-    this. combiningTwoArrays(this.task1Concat, this.task1Concat1)
-   
+    this.combiningTwoArrays(this.task1Concat, this.task1Concat1);
+    this.sortingNumbersInArray(this.task1Sort);
+    this.sortingObjectsInArray(this.task2Sort);
+    this.gettingRidOfFirstFourLettersFromString('WolaOciecka');
+    this.combininigTwoArraysUsingSpreadOperator(this.task1Spread, this.task1Spread1)
   }
 
   filterEvenNumbers(array: number[]) {
@@ -87,9 +136,22 @@ export class ArrayOperationsComponent implements OnInit {
     console.log(this.task3ReduceResult);
   }
 
-  combiningTwoArrays(array1:number[], array2:number[]){
-this.task1ConcatResult = array1.concat(array2)
+  combiningTwoArrays(array1: number[], array2: number[]) {
+    this.task1ConcatResult = array1.concat(array2);
   }
 
- 
+  sortingNumbersInArray(array: number[]) {
+    this.task1SortResult = array.sort();
+  }
+
+  sortingObjectsInArray(array: { name: string; age: number }[]) {
+    this.task2SortResult = array.sort((a, b) => a.age - b.age);
+  }
+  gettingRidOfFirstFourLettersFromString(string: string) {
+    this.task2SliceResult = string.slice(4);
+  }
+
+  combininigTwoArraysUsingSpreadOperator(array1: string[], array2: string[]) {
+    this.task1SpreadResult = [...array1, ...array2];
+  }
 }
