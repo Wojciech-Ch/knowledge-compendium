@@ -1,0 +1,65 @@
+<h1>
+  W Angularze istnieją dwa główne rodzaje formularzy: (Template-driven forms) i
+  (Reactive forms).
+</h1>
+<div>
+  (Template-driven forms):
+  <ul>
+    <li>Są proste w użyciu i idealne dla prostych scenariuszy.</li>
+    <li>
+      Używają dwukierunkowego wiązania danych (ngModel) do aktualizowania modelu
+      danych.
+    </li>
+    <li>Moduł FormsModule jest wymagany do ich działania.</li>
+    <li>
+      Wymaga mniej kodu w klasie komponentu, ponieważ większość logiki jest
+      zarządzana w szablonie.
+    </li>
+    <li>
+      Dobry wybór dla prostych formularzy i początkujących użytkowników
+      Angulara.
+    </li>
+  </ul>
+
+
+
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <input type="text" name="username" placeholder="login" ngModel>
+    <input type="password" name="password" placeholder="hasło" ngModel>
+    <button type="submit">Submit</button>
+  </form>
+  <h6>output w consoli</h6>
+
+<br>
+
+  <div>
+    (Reactive forms):
+    <ul>
+      <li>
+        Oferują większą elastyczność i lepszą skalowalność dla złożonych
+        formularzy.
+      </li>
+      <li>
+        Używają podejścia opartego na modelu, gdzie logika formularza jest
+        zaimplementowana w komponencie klasy.
+      </li>
+      <li>Moduł ReactiveFormsModule jest wymagany do ich działania.</li>
+      <li>
+        Lepsza obsługa dynamicznych formularzy, gdzie liczba pól może się
+        zmieniać.
+      </li>
+      <li>
+        Umożliwiają łatwiejsze testowanie, ponieważ można testować logikę
+        formularza bez interakcji z DOM.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmition()">
+    <input type="text" formControlName="username" placeholder="login">
+    <input type="password" formControlName="password" placeholder="hasło">
+    <button type="submit">Submit</button>
+    
+  </form>
+  <h6>output w consoli</h6>

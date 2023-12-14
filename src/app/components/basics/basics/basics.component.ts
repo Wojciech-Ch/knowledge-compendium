@@ -26,5 +26,9 @@ export class BasicsComponent {
       name: 'Operacje na stringach',
       path: 'string-operations',
     },
+    forms: {
+      name: 'Formularze',
+      path: 'forms',
+    },
   };
 }

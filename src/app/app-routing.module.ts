@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/landing-page/landing-page.module').then(
         (m) => m.LandingPageModule
-      ),
+    ),
   },
   {
     path: 'basics',
@@ -23,6 +23,11 @@ const routes: Routes = [
     path: 'solved-exercises',
     loadChildren: () =>
       import('./components/solved-exercises/solved-exercises.module').then((m) => m.SolvedExercisesModule),
+  },
+  {
+    path: 'interview-questions',
+    loadChildren: () =>
+      import('./components/interview-questions/interview-questions.module').then((m) => m.InterviewQuestionsModule),
   },
   {
     path: '**',

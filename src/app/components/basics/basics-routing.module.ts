@@ -5,6 +5,7 @@ import { ArrayOperationsComponent } from './basics/array-operations/array-operat
 import { BasicTypesComponent } from './basics/basic-types/basic-types/basic-types.component';
 import { DataBindingComponent } from './basics/data-binding/data-binding.component';
 import { StringOperationsComponent } from './basics/string-operations/string-operations.component';
+import { FormsComponent } from './basics/forms/forms.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
 },
 {path: "string-operations",
 component: StringOperationsComponent
+},
+{path: "forms",
+component: FormsComponent
 }
 ];
 
