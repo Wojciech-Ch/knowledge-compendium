@@ -1,26 +1,20 @@
-
 <div class="flex">wyróżniamy wiele metod których możemy użyć na arrayach</div>
-<ul >
+<ul>
   <li><strong>push </strong>dodaje wartość na koniec tablicy.</li>
-  <div>let arr = [1,2,3,4]; </div>
+  <div>let arr = [1,2,3,4];</div>
   <div>arr.push(5);</div>
   <div>output: [1,2,3,4,5]</div>
   <li><strong>unshift</strong>dodaje wartość na początek tablicy.</li>
-  <div>let arr = [1,2,3,4]; </div>
-  <div>arr.unshift(5); </div>
-  <div>Output: [5,1,2,3,4,5] </div>
+  <div>let arr = [1,2,3,4];</div>
+  <div>arr.unshift(5);</div>
+  <div>Output: [5,1,2,3,4,5]</div>
   <li><strong>pop</strong></li>
-  <div>let arr2 = [10,20,30]; </div>
-  <div>arr2.pop() </div>
-  <div>output: [10,20]  </div>
+  <div>let arr2 = [10,20,30];</div>
+  <div>arr2.pop()</div>
+  <div>output: [10,20]</div>
 </ul>
 
-
-
-
 <strong></strong>
-
-
 
 <h1>Filtrowanie "filter"</h1>
 <h5>
@@ -177,60 +171,65 @@
     <mat-card-content>
       <div class="task">
         <mat-card-title>Task 2</mat-card-title>
-        <p>Sortowanie tablicy obiektów na podstawie wieku osób od najmniejszej do największej.</p>
-        <p><strong>Dane:</strong> {{this.task2Sort | json}} </p>
-        <p><strong>Wynik:</strong> {{this.task2SortResult | json}} </p>
+        <p>
+          Sortowanie tablicy obiektów na podstawie wieku osób od najmniejszej do
+          największej.
+        </p>
+        <p><strong>Dane:</strong> {{ this.task2Sort | json }}</p>
+        <p><strong>Wynik:</strong> {{ this.task2SortResult | json }}</p>
       </div>
     </mat-card-content>
   </mat-card>
 </div>
 <div>
-<h1>Slice "slice"</h1>
-<div class="flex">
-  <mat-card class="my-card">
-    
-
-    <mat-card-content>
-      <div class="task">
-        <mat-card-title>Task 1</mat-card-title>
-        <p>Wyświetl pierwsze 3 elementy tablicy jako pozycje w liście </p>
-        <p><strong>Dane:</strong> {{ task1Slice }}</p>
-        <p><strong>Wynik:</strong> </p>
-        <ul>
-          <li *ngFor="let list of task1Slice | slice:0:3">{{list}}</li>
-        </ul>
-      </div>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="my-card">
-    
-
-    <mat-card-content>
-      <div class="task">
-        <mat-card-title>Task 2</mat-card-title>
-        <p>Usuń pierwsze 4 litery ze stringa </p>
-        <p><strong>Dane:</strong> WolaOciecka</p>
-        <p><strong>Wynik:</strong> {{task2SliceResult}} </p>
-       
-      </div>
-    </mat-card-content>
-  </mat-card>
+  <h1>Slice "slice"</h1>
+  <div class="flex">
+    <mat-card class="my-card">
+      <mat-card-content>
+        <div class="task">
+          <mat-card-title>Task 1</mat-card-title>
+          <p>Wyświetl pierwsze 3 elementy tablicy jako pozycje w liście</p>
+          <p><strong>Dane:</strong> {{ task1Slice }}</p>
+          <p><strong>Wynik:</strong></p>
+          <ul>
+            <li *ngFor="let list of task1Slice | slice : 0 : 3">{{ list }}</li>
+          </ul>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="my-card">
+      <mat-card-content>
+        <div class="task">
+          <mat-card-title>Task 2</mat-card-title>
+          <p>Usuń pierwsze 4 litery ze stringa</p>
+          <p><strong>Dane:</strong> WolaOciecka</p>
+          <p><strong>Wynik:</strong> {{ task2SliceResult }}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div>
+    <h1>Spread (spread)</h1>
+    <h5>
+      może być wykorzystywany do dodawania wartości do tablicy, łączenia tablic,
+    </h5>
+    <div class="flex">
+      <mat-card class="my-card">
+        <mat-card-content>
+          <div class="task">
+            <mat-card-title>Task 1</mat-card-title>
+            <p>Złącz 2 tablice</p>
+            <p>
+              <strong>Dane:</strong>{{ this.task1Spread }}
+              {{ this.task1Spread1 }}
+            </p>
+            <p><strong>Wynik:</strong> [{{ this.task1SpreadResult }}]</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <button class="arrow-button"></button>
+  </div>
 </div>
-<div>
-  <h1>Spread (spread)</h1>
-<h5>
-  może być wykorzystywany do dodawania wartości do tablicy, łączenia tablic,
-</h5>
-<div class="flex">
-  <mat-card class="my-card">
-    <mat-card-content>
-      <div class="task">
-        <mat-card-title>Task 1</mat-card-title>
-        <p>Złącz 2 tablice</p>
-        <p><strong>Dane:</strong>{{this.task1Spread}} {{this.task1Spread1}}</p>
-        <p><strong>Wynik:</strong> [{{ this.task1SpreadResult }}]</p>
-      </div>
-    </mat-card-content>
-  </mat-card>
 
-</div>
+<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_left" class="arrow-button" routerLink="/basics" ></mat-icon>

@@ -1,10 +1,15 @@
-<mat-card>
+<mat-card class="basics-wrapper">
     <mat-card-header>
       <mat-card-title>Podstawowe zagadnienia</mat-card-title>
     </mat-card-header>
     <mat-card-actions>
       
-        <button *ngFor="let item of basics | keyvalue" [routerLink]="item.value.path">{{ item.value.name }}</button>
+      <div class="button-container">
+        <button *ngFor="let item of basics | keyvalue" [routerLink]="item.value.path">
+          {{ item.value.name }}
+        </button>
+      </div>
+        
     </mat-card-actions>
   </mat-card>
 

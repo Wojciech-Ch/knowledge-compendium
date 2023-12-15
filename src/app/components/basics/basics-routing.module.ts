@@ -6,6 +6,7 @@ import { BasicTypesComponent } from './basics/basic-types/basic-types/basic-type
 import { DataBindingComponent } from './basics/data-binding/data-binding.component';
 import { StringOperationsComponent } from './basics/string-operations/string-operations.component';
 import { FormsComponent } from './basics/forms/forms.component';
+import { ObjectOperationsComponent } from './basics/object-operations/object-operations.component';
 
 const routes: Routes = [
   {
@@ -20,15 +21,10 @@ const routes: Routes = [
     path: 'basic-types',
     component: BasicTypesComponent,
   },
-  {path: "data-binding",
-  component: DataBindingComponent
-},
-{path: "string-operations",
-component: StringOperationsComponent
-},
-{path: "forms",
-component: FormsComponent
-}
+  { path: 'data-binding', component: DataBindingComponent },
+  { path: 'string-operations', component: StringOperationsComponent },
+  { path: 'forms', component: FormsComponent },
+  { path: 'object-operations', component: ObjectOperationsComponent },
 ];
 
 @NgModule({

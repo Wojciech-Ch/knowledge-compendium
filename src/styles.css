@@ -10,3 +10,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     display: flex;
     justify-content: center;
    }
+
+   .arrow-button {
+  position: fixed;   /* Fixed position */
+  left: 10px;        /* 10 pixels from the left */
+  bottom: 10px;      /* 10 pixels from the bottom */      /* Height of the arrow */
+  background-color: #4CAF50; /* Transparent background */
+  border: none;                  /* No border */
+  cursor: pointer;               /* Pointer cursor on hover */
+}
+

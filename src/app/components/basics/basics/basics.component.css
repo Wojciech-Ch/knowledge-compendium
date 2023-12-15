@@ -1,0 +1,36 @@
+.basics-wrapper {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+}
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+button {
+  flex: 0 0 calc(33.333% - 10px);
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+  button {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+button:hover {
+  background-color: #45a049;
+}

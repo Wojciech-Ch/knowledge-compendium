@@ -16,10 +16,10 @@ export class FormsComponent {
   });
 
 onSubmit(form: NgForm) {
-  console.log(form.value); // Teraz możemy odwołać się do wartości formularza
+  console.log(form.value); 
 }
 
 onSubmition() {
-  console.log(this.myReactiveForm.value); // używamy this.myForm, które jest typu FormGroup
+  console.log(this.myReactiveForm.value); 
 }
 }

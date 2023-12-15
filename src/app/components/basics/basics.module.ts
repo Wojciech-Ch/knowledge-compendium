@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { StringOperationsComponent } from './basics/string-operations/string-operations.component';
 import { FormsComponent } from './basics/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import { ObjectOperationsComponent } from './basics/object-operations/object-operations.component';
 @NgModule({
   declarations: [
     BasicsComponent,
@@ -18,8 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     DataBindingComponent,
     StringOperationsComponent,
     FormsComponent,
+    ObjectOperationsComponent,
   ],
-  imports: [CommonModule, BasicsRoutingModule, MatCardModule, FormsModule,ReactiveFormsModule ],
+  imports: [CommonModule, BasicsRoutingModule, MatCardModule, FormsModule,ReactiveFormsModule, MatIconModule ],
 })
 export class BasicsModule implements OnInit {
   ngOnInit(): void {}

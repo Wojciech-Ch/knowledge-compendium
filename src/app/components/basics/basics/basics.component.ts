@@ -30,5 +30,9 @@ export class BasicsComponent {
       name: 'Formularze',
       path: 'forms',
     },
-  };
+    objectOperations: {
+      name: 'Operacje na obiektach',
+      path: 'object-operations',
+  }
+}
 }
