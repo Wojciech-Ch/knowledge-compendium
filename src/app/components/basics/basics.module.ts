@@ -12,6 +12,8 @@ import { FormsComponent } from './basics/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import { ObjectOperationsComponent } from './basics/object-operations/object-operations.component';
+import { LifecycleHooksComponent } from './basics/lifecycle-hooks/lifecycle-hooks.component';
+import { UnitsComponent } from './basics/units/units.component';
 @NgModule({
   declarations: [
     BasicsComponent,
@@ -21,6 +23,8 @@ import { ObjectOperationsComponent } from './basics/object-operations/object-ope
     StringOperationsComponent,
     FormsComponent,
     ObjectOperationsComponent,
+    LifecycleHooksComponent,
+    UnitsComponent,
   ],
   imports: [CommonModule, BasicsRoutingModule, MatCardModule, FormsModule,ReactiveFormsModule, MatIconModule ],
 })

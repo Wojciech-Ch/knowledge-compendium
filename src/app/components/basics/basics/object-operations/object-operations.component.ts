@@ -37,7 +37,7 @@ ngOnInit(): void {
   this.removeOcena()
   this.checkIfObjectHasProperty()
   this.copyObject(),
-  this.spearateKeysAndValues()
+  this.spearateKeysValuesAndPairs()
 
 }
 
@@ -58,11 +58,13 @@ copyObject() {
   let kopia = Object.assign({}, this.exampleObject);
   console.log("kopia",kopia)
 }
-spearateKeysAndValues(){
+spearateKeysValuesAndPairs(){
   let klucze = Object.keys(this.exampleObject);
   let wartosci = Object.values(this.exampleObject);
+  let pary = Object.entries(this.exampleObject);
 
   console.log("klucze",klucze)
   console.log("wartosci",wartosci)  
+  console.log("pary",pary)
 }
 }

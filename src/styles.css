@@ -5,12 +5,14 @@ body{
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: lightgray; }
 .flex{
     display: flex;
     justify-content: center;
    }
-
+:host{
+    background-color: lightgray;
+}
    .arrow-button {
   position: fixed;   /* Fixed position */
   left: 10px;        /* 10 pixels from the left */

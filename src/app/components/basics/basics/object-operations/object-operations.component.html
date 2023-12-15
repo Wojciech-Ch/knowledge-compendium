@@ -2,10 +2,18 @@
 
 
 <h4>Zdefiniujmy prosty obiekt:</h4>
-<div>{{exampleObject|json}}</div>
+<pre [innerHTML]="exampleObject | json"></pre>
 
 <h2>Dodawanie Nowego Pola</h2>
+<pre [innerHTML]="addFieldToObject"></pre>
 <h2>Update wartości w obiekcie</h2>
+<pre [innerHTML]="updateCena"></pre>
 <h2>Usuwanie wartości z obiektu, możemy usunąć jedynie opcjonalne pola</h2>
+<pre [innerHTML]="removeOcena"></pre>
 <h2>Sprawdzanie czy pole istnieje</h2>
+<pre [innerHTML]="checkIfObjectHasProperty"></pre>
 <h2>Kopiowanie obiektu</h2>
+<pre [innerHTML]="copyObject"></pre>
+<h2>Wyodrębnianie Kluczy, Wartości lub Par [klucz, wartość]</h2>
+<pre [innerHTML]="spearateKeysValuesAndPairs"></pre>
+<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_left" class="arrow-button" routerLink="/basics" ></mat-icon>

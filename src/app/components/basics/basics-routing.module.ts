@@ -7,6 +7,8 @@ import { DataBindingComponent } from './basics/data-binding/data-binding.compone
 import { StringOperationsComponent } from './basics/string-operations/string-operations.component';
 import { FormsComponent } from './basics/forms/forms.component';
 import { ObjectOperationsComponent } from './basics/object-operations/object-operations.component';
+import { LifecycleHooksComponent } from './basics/lifecycle-hooks/lifecycle-hooks.component';
+import { UnitsComponent } from './basics/units/units.component';
 
 const routes: Routes = [
   {
@@ -25,6 +27,8 @@ const routes: Routes = [
   { path: 'string-operations', component: StringOperationsComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'object-operations', component: ObjectOperationsComponent },
+  {path: 'lifecycle-hooks', component: LifecycleHooksComponent},
+  {path: 'units', component: UnitsComponent},
 ];
 
 @NgModule({

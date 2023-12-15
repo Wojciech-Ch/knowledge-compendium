@@ -33,6 +33,14 @@ export class BasicsComponent {
     objectOperations: {
       name: 'Operacje na obiektach',
       path: 'object-operations',
-  }
-}
+    },
+    lifecycleHooks: {
+      name: 'Lifecycle hooks',
+      path: 'lifecycle-hooks',
+    },
+    units: {
+      name: 'Jednostki',
+      path: 'units',
+    },
+  };
 }
