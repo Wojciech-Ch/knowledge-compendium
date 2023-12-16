@@ -42,5 +42,13 @@ export class BasicsComponent {
       name: 'Jednostki',
       path: 'units',
     },
+    accesibility: {
+      name: 'Accessibility',
+      path: 'accessibility',
+    },
+    directives:{
+      name: "directives",
+      path: "directives"
+    }
   };
 }

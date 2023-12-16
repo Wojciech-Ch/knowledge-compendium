@@ -9,6 +9,8 @@ import { FormsComponent } from './basics/forms/forms.component';
 import { ObjectOperationsComponent } from './basics/object-operations/object-operations.component';
 import { LifecycleHooksComponent } from './basics/lifecycle-hooks/lifecycle-hooks.component';
 import { UnitsComponent } from './basics/units/units.component';
+import { AccessibilityComponent } from './basics/accessibility/accessibility.component';
+import { DirectivesComponent } from './basics/directives/directives.component';
 
 const routes: Routes = [
   {
@@ -27,8 +29,10 @@ const routes: Routes = [
   { path: 'string-operations', component: StringOperationsComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'object-operations', component: ObjectOperationsComponent },
-  {path: 'lifecycle-hooks', component: LifecycleHooksComponent},
-  {path: 'units', component: UnitsComponent},
+  { path: 'lifecycle-hooks', component: LifecycleHooksComponent },
+  { path: 'units', component: UnitsComponent },
+  { path: 'accessibility', component: AccessibilityComponent },
+  {path: "directives", component:DirectivesComponent}
 ];
 
 @NgModule({

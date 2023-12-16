@@ -14,6 +14,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { ObjectOperationsComponent } from './basics/object-operations/object-operations.component';
 import { LifecycleHooksComponent } from './basics/lifecycle-hooks/lifecycle-hooks.component';
 import { UnitsComponent } from './basics/units/units.component';
+import { AccessibilityComponent } from './basics/accessibility/accessibility.component';
+import { DirectivesComponent } from './basics/directives/directives.component';
 @NgModule({
   declarations: [
     BasicsComponent,
@@ -25,6 +27,8 @@ import { UnitsComponent } from './basics/units/units.component';
     ObjectOperationsComponent,
     LifecycleHooksComponent,
     UnitsComponent,
+    AccessibilityComponent,
+    DirectivesComponent,
   ],
   imports: [CommonModule, BasicsRoutingModule, MatCardModule, FormsModule,ReactiveFormsModule, MatIconModule ],
 })
