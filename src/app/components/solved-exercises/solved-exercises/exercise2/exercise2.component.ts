@@ -20,9 +20,12 @@ export class Exercise2Component {
 
   constructor() {}
   onSubmit() {
-    console.log(this.reactiveForm.value);
+    if(this.reactiveForm.valid){
+
+    
     this.taskList.push(this.reactiveForm.value);
     this.reactiveForm.reset();
+  }
   }
   usun(i:number){
     this.taskList = [
