@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BasicsModel } from '../basics.model';
 
 @Component({
@@ -6,8 +6,15 @@ import { BasicsModel } from '../basics.model';
   templateUrl: './basics.component.html',
   styleUrls: ['./basics.component.css'],
 })
-export class BasicsComponent {
+export class BasicsComponent implements OnInit {
+  search = ""
   constructor() {}
+
+  ngOnInit(): void {
+  
+
+  }
+
 
   basics: { [key: string]: BasicsModel } = {
     basicTypes: {
@@ -51,4 +58,10 @@ export class BasicsComponent {
       path: "directives"
     }
   };
+  get filteredItems(): { [key: string]: BasicsModel } {
+    console.log(Object.keys(this.basics))
+    return Object.keys(this.basics)
+      .filter(key => this.basics[key].name.toLowerCase().includes(this.search.toLowerCase()))
+      .reduce((res, key) => ({ ...res, [key]: this.basics[key] }), {});
+  }
 }

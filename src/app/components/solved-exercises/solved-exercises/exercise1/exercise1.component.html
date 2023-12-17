@@ -1,0 +1,15 @@
+<h1>
+  W tym komponencie utwórz formularz z dwoma polami tekstowymi: 'Imię' i
+  'Nazwisko'. <br> Dodaj przycisk 'Zapisz', który po kliknięciu wyświetli wpisane
+  dane na ekranie poniżej formularza.
+</h1>
+
+
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmition()">
+    <input type="text" placeholder="imie"  formControlName="name">
+    <input type="text" placeholder="nazwisko" formControlName="surname">
+    <button>Submit</button>
+</form>
+<div *ngIf="formValueVisible">
+{{reactiveForm.value | json}}
+</div>

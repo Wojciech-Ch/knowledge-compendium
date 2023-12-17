@@ -1,8 +1,13 @@
+body {
+  margin: 0;
+  width: 100%;
+}
 .basics-wrapper {
   display: flex; /* Enable Flexbox */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh; /* Full viewport height */
+  width: 100%!important; /* Full viewport width */
   background-color: gray;
 }
 .button-container {

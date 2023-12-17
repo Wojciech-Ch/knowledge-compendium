@@ -1,0 +1,13 @@
+<h1>Rozwiązane zadania</h1>
+
+<div> ZADANIA Z FORMULARZY</div>
+
+<div class="button-container">
+   
+<button
+  *ngFor="let item of solvedFormsExercises | keyvalue"
+  [routerLink]="item.value.path"
+>
+  {{ item.value.name }}
+</button>
+</div>

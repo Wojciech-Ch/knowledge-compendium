@@ -1,11 +1,14 @@
 <mat-card class="basics-wrapper">
+  <input type="text" placeholder="Wyszukiwarka" [(ngModel)]="search">
+  
     <mat-card-header>
       <mat-card-title>Podstawowe zagadnienia</mat-card-title>
     </mat-card-header>
     <mat-card-actions>
       
+    
       <div class="button-container">
-        <button *ngFor="let item of basics | keyvalue" [routerLink]="item.value.path">
+        <button *ngFor="let item of filteredItems | keyvalue" [routerLink]="item.value.path">
           {{ item.value.name }}
         </button>
       </div>

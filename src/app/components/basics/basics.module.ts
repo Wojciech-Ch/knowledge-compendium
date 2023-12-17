@@ -16,6 +16,7 @@ import { LifecycleHooksComponent } from './basics/lifecycle-hooks/lifecycle-hook
 import { UnitsComponent } from './basics/units/units.component';
 import { AccessibilityComponent } from './basics/accessibility/accessibility.component';
 import { DirectivesComponent } from './basics/directives/directives.component';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     BasicsComponent,
@@ -30,7 +31,7 @@ import { DirectivesComponent } from './basics/directives/directives.component';
     AccessibilityComponent,
     DirectivesComponent,
   ],
-  imports: [CommonModule, BasicsRoutingModule, MatCardModule, FormsModule,ReactiveFormsModule, MatIconModule ],
+  imports: [CommonModule, BasicsRoutingModule, MatCardModule, FormsModule,ReactiveFormsModule, MatIconModule,MatInputModule ],
 })
 export class BasicsModule implements OnInit {
   ngOnInit(): void {}

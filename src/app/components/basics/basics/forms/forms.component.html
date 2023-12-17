@@ -21,16 +21,14 @@
     </li>
   </ul>
 
-
-
   <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
-    <input type="text" name="username" placeholder="login" ngModel>
-    <input type="password" name="password" placeholder="hasło" ngModel>
+    <input type="text" name="username" placeholder="login" ngModel />
+    <input type="password" name="password" placeholder="hasło" ngModel />
     <button type="submit">Submit</button>
   </form>
   <h6>output w consoli</h6>
 
-<br>
+  <br />
 
   <div>
     (Reactive forms):
@@ -57,10 +55,15 @@
 </div>
 
 <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmition()">
-    <input type="text" formControlName="username" placeholder="login">
-    <input type="password" formControlName="password" placeholder="hasło">
-    <button type="submit">Submit</button>
-    
-  </form>
-  <h6>output w consoli</h6>
-  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_left" class="arrow-button" routerLink="/basics" ></mat-icon>
+  <input type="text" formControlName="username" placeholder="login" />
+  <input type="password" formControlName="password" placeholder="hasło" />
+  <button type="submit">Submit</button>
+</form>
+<h6>output w consoli</h6>
+<mat-icon
+  aria-hidden="false"
+  aria-label="Example home icon"
+  fontIcon="keyboard_arrow_left"
+  class="arrow-button"
+  routerLink="/basics"
+></mat-icon>
