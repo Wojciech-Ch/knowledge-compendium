@@ -12,7 +12,10 @@ import {
   styleUrls: ['./exercise2.component.css'],
 })
 export class Exercise2Component {
-  taskList: Array<any> = [];
+  taskList: Array<any> = [
+{title: "zadanie1", description: "opis1"},
+
+  ];
   reactiveForm = new FormGroup({
     title: new FormControl('', Validators.required),
     description: new FormControl(),
@@ -25,6 +28,7 @@ export class Exercise2Component {
     
     this.taskList.push(this.reactiveForm.value);
     this.reactiveForm.reset();
+    console.log("tasklist",this.taskList)
   }
   }
   usun(i:number){

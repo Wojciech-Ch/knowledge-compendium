@@ -1,0 +1,83 @@
+<ol>
+
+  <li>
+    Każde pole tekstowe musi być wymagane i powinno zawierać co najmniej 3
+    znaki.
+  </li>
+  <li>
+    Powinien być przycisk do dodawania nowego pola tekstowego. Każde nowe pole
+    powinno automatycznie spełniać wymagania walidacji.
+  </li>
+  <li>
+    Formularz powinien reagować na każdą zmianę w czasie rzeczywistym,
+    wyświetlając gdzieś na stronie aktualny status walidacji każdego pola (np.
+    "Pole jest wymagane"
+  </li>
+  <li>
+    Dodaj przycisk do przesyłania formularza, który jest aktywny tylko wtedy,
+    gdy cały formularz jest prawidłowo wypełniony. Po przesłaniu formularza
+    wyświetl dane z wszystkich pól w formie listy.
+  </li>
+</ol>
+<div>
+  <form [formGroup]="hardReactiveForm" class="formWrapper">
+    <input type="text" formControlName="name" placeholder="Nazwa towaru" />
+    <div
+      *ngIf="
+        this.controlsFromForm.name.invalid && this.controlsFromForm.name.touched
+      "
+    >
+      Nazwa towaru jest wymagana
+    </div>
+    <input type="number" formControlName="price" placeholder="Cena" />
+    <div
+      *ngIf="
+        this.controlsFromForm.price.invalid &&
+        this.controlsFromForm.price.touched
+      "
+    >
+      Cena towaru jest wymagana
+    </div>
+    <input type="number" formControlName="amount" placeholder="Ilość" />
+    <div
+      *ngIf="
+        this.controlsFromForm.amount.invalid &&
+        this.controlsFromForm.amount.touched
+      "
+    >
+      Ilość towaru jest wymagana
+    </div>
+  </form>
+
+  <div>Czy chcesz dodać nową kontrolke?</div>
+  <input type="checkbox" (click)="toggleVisible()" />
+  <div *ngIf="toggle">
+    <input
+      type="text"
+      [(ngModel)]="newControlName"
+      placeholder="nazwa nowej kontrolki"
+    />
+    <input
+      type="text"
+      [(ngModel)]="newControlValue"
+      placeholder="wartość nowej kontrolki"
+    />
+    <button (click)="addControl(this.newControlName, this.newControlValue, [])">
+      nowa kontrolka
+    </button>
+  </div>
+
+  <button (click)="addFormValuesToList()">Dodaj wartość</button>
+
+  <div>
+    LISTA PRODUKTÓW
+    <ol>
+      <li *ngFor="let items of itemLists">
+        Nazwa produktu: {{ items.name }}, Cena: {{ items.price }}, Ilość:
+        {{ items.amount }} 
+      </li>
+    </ol>
+    <h2>Jak będzie czas to ogarnąć jak zrobić aby wyświetlić kontrolki które dodaje dynamicznie</h2>
+    <a href="https://chat.openai.com/share/53063fe9-a5db-4d9e-b620-64a0a2640575">rozwiązanie zadania z chatem</a>
+  </div>
+</div>

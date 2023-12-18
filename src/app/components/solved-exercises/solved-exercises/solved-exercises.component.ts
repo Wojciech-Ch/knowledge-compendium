@@ -9,15 +9,15 @@ import { Component } from '@angular/core';
 export class SolvedExercisesComponent {
   solvedFormsExercises: Array<any> = [
     {
-      name: 'Napisz prosty formularz reaktywny',
+      name: 'Napisz prosty formularz reaktywny (łatwe)',
       path: 'exercise-1'
     },
     {
-      name: 'Stwórz ToDo liste opartą na formularzu reaktywnym',
+      name: 'Stwórz ToDo liste opartą na formularzu reaktywnym (średnie)',
       path: 'exercise-2'
     },
     {
-      name: 'Exercise 3',
+      name: 'Stwórz formularz spełniający warunki (trudne)',
       path: 'exercise-3'
     }
   ]

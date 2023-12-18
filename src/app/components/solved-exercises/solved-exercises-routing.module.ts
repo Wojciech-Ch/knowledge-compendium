@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SolvedExercisesComponent } from './solved-exercises/solved-exercises.component';
 import { Exercise1Component } from './solved-exercises/exercise1/exercise1.component';
 import { Exercise2Component } from './solved-exercises/exercise2/exercise2.component';
+import { Exercise3Component } from './solved-exercises/exercise3/exercise3.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'exercise-2',
     component: Exercise2Component
+  },
+  {
+    path:'exercise-3',
+    component: Exercise3Component
   }
 ];
 
