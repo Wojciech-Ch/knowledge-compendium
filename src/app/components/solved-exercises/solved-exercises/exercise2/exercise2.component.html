@@ -2,33 +2,34 @@
   "Zaprojektuj i zaimplementuj aplikację typu 'Lista Zadań' (To-Do List) w
   Angularze. Aplikacja powinna pozwalać użytkownikom na dodawanie nowych zadań,
   usuwanie istniejących oraz oznaczanie zadań jako wykonane. Każde zadanie
-  powinno składać się z tytułu i opcjonalnego opisu. 
-<div class="toDoWrapper">
-  <div class="list1">
-    Dodaj rzeczy do zrobienia
-    <form [formGroup]="reactiveForm">
-      <input type="text" placeholder="Tytuł" formControlName="title" />
-      <input
-        type="text"
-        placeholder="Opis (opcjonalne)"
-        formControlName="description"
-      />
-      <button (click)="onSubmit()">Submit</button>
-    </form>
-  </div>
-  <div class="list2">
-    Lista rzeczy do zrobienia
+  powinno składać się z tytułu i opcjonalnego opisu.
+  <div class="toDoWrapper">
+    <div class="list1">
+      Dodaj rzeczy do zrobienia
+      <form [formGroup]="reactiveForm">
+        <input type="text" placeholder="Tytuł" formControlName="title" />
+        <input
+          type="text"
+          placeholder="Opis (opcjonalne)"
+          formControlName="description"
+        />
+        <button (click)="onSubmit()">Submit</button>
+      </form>
+    </div>
+    <div class="list2">
+      Lista rzeczy do zrobienia
 
-    <ul>
-      <li *ngFor="let task of taskList | keyvalue; index as i">
-        <input type="checkbox" />
-        <b>Task:</b>{{ i + 1 }}{{ task.value.title }}
+      <ul>
+        <li *ngFor="let task of taskList | keyvalue; index as i">
+          <input type="checkbox" />
+          <b>Task {{ i + 1 }}: </b>{{ task.value.title }}
 
-        <span *ngIf="task.value.description"
-          ><b> Opis:</b>{{ task.value.description }}</span
-        >
-        <button (click)="usun(i)">X</button>
-      </li>
-    </ul>
+          <span *ngIf="task.value.description"
+            ><b> Opis:</b>{{ task.value.description }}</span
+          >
+          <button (click)="usun(i)">X</button>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
+</h1>

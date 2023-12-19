@@ -48,8 +48,9 @@
       Ilość towaru jest wymagana
     </div>
   </form>
-
+<div class="formWrapper">
   <div>Czy chcesz dodać nową kontrolke?</div>
+  
   <input type="checkbox" (click)="toggleVisible()" />
   <div *ngIf="toggle">
     <input
@@ -68,7 +69,7 @@
   </div>
 
   <button (click)="addFormValuesToList()">Dodaj wartość</button>
-
+</div>
   <div>
     LISTA PRODUKTÓW
     <ol>
@@ -78,6 +79,6 @@
       </li>
     </ol>
     <h2>Jak będzie czas to ogarnąć jak zrobić aby wyświetlić kontrolki które dodaje dynamicznie</h2>
-    <a href="https://chat.openai.com/share/53063fe9-a5db-4d9e-b620-64a0a2640575">rozwiązanie zadania z chatem</a>
+    <a href="https://chat.openai.com/share/53063fe9-a5db-4d9e-b620-64a0a2640575">rozwiązanie zadania z chateem</a>
   </div>
 </div>
