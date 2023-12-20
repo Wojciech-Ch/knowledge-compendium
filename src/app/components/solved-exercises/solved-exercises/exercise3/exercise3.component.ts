@@ -50,5 +50,7 @@ addControl(controlName: any, value: any, validators: any[]) {
 }
 toggleVisible(){
 this.toggle = !this.toggle
+console.log("g")
 }
+
 }
